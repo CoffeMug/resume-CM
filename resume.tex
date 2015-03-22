@@ -1,0 +1,185 @@
+\documentclass{resume}
+
+\renewcommand{\categoryfont}{\sc}
+
+%
+% set the space used for category titles here:
+% use the same value for oddsidemargin and marginparwidth [the latter 
+% 		will be reset to account for marginparsep]
+% 
+\setlength{\oddsidemargin}{1in}
+\setlength{\marginparwidth}{1in}
+% 
+% calculate other dimensions [textwidth and evensidemargin] 
+% in function of oddsidemargin and marginparwidth: 
+% would be nicer to put in the class file...
+%
+\addtolength{\marginparwidth}{-\marginparsep}
+ \setlength{\evensidemargin}{\oddsidemargin}
+ \setlength{\textwidth}{\paperwidth}
+ \addtolength{\textwidth}{-2in}
+ \addtolength{\textwidth}{-2\oddsidemargin}
+ \addtolength{\textwidth}{\marginparwidth}
+ \addtolength{\textwidth}{\marginparsep}
+%
+%
+\setlength{\topmargin}{-0.5in}
+%
+%
+\renewcommand{\labelcitem}{$\diamond$}
+\renewcommand{\labelitemi}{$\cdot$}
+\newcommand{\first}{$1^{\mbox{\scriptsize st}}$\ }
+\newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
+\newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
+
+\author{Amin Khorsandiaghai}
+% ------ Address --------------------------------------------------------
+
+\address{Blomgatan 20\\
+	 16960 Solna\\
+	 Sweden\\}
+        {+46725074461 (mobile)\\
+	\mbox{\small\tt aminkhorsandi@gmail.com}\\
+	\mbox{\small\tt amin.khorsandiaghai@ericsson.com}}
+
+\begin{document}
+\maketitle
+% ------- Education ---------------------------------------------------
+
+\begin{category}{Education}
+\citem{Uppsala University}, Uppsala, Sweden. \\
+Diploma [M.Sc.] in computer science, (grades: 87\%).\\
+Thesis title: {\em Implementing typed Psi-Calculi.}\\
+Key courses: Large scale programming, Verification methods, Data mining, From domains to requirements, Test methodology,
+Software architecture with Java, Parallel programming, Compiler design project. 
+\citem{Tabriz University}, Tabriz, Iran.\\
+Diploma [B.Sc.] in computer science (software engineering option), May 2004.\\
+Key courses: Information system analysis and design, Computer networks, Management information systems, Algorithm design and analysis, Database technology.
+\end{category}
+
+\begin{center}
+\line(1,0){400}
+\end{center}
+
+% --------- Research ----------------------------------------------------
+
+\begin{category}{Open Source Projects}
+
+\citembullet
+Working in a XFT (4 developers) to implement a ray-tracer program based on its specification.
+The aim of the project was to write a high quality program which is easy to read and understand, 
+well-structured, well-documented, portable and easily maintainable.   
+The project includes writing unit tests using Junit and test automation using Ant/Maven to ensure the functionality of the program.
+Profiling also used to analyze the resource consumption of program and to optimize it. 
+We use Eclipse IDE for this project.
+Svn was the project's version control system (nowadays we maintain the code in Git):
+https://github.com/coffeMug/ray-tracer.git
+
+\citembullet A e-commerce project (on-line PC shop) based on MVC design pattern (n-tier architecture) and 
+implemented in JAVA-EE development platform using Netbeans.
+
+\citembullet
+Implementing the time-stamp based concurrency control protocol for a distributed client-server system written in
+Erlang/OTP.
+
+\citembullet
+During the course ``from domain to requirements'' I was a member of a team working on a software engineering
+project to investigate the domain of a water distribution system. Later a formal prescription of 
+requirements for the system has been obtained in RAISE specification language
+
+\citembullet
+Writing formal specification of a double deck elevator controller software in B Specification Language using
+AtelierB tool (later C code produced as the final refinement step).
+
+\citembullet Writing a compiler for a small language, uC, and generating assembly 
+code for the MIPS architecture.
+The project was in a sequence of steps, where each step was a separately specified 
+assignment to complete a specific component of the compiler.
+The generated assembly code was executed by the SPIM MIPS simulator. 
+The compiler was written using Standard ML programming language:
+https://github.com/coffeMug/ML-MuC-compiler.git 
+
+\end{category}
+
+\begin{center}
+\line(1,0){400}
+\end{center}
+
+%\newpage
+% -------- Work experience --------------------------------------------
+
+\begin{category}{Work \\experiences}
+
+\citem{Software Developer}, Ericsson , Stockholm, Sweden (November 2012 - Now)\\ \\
+Working for SBG (Session Border Gateway) node in CBA migration project which is a project 
+aimed for transferring the existing legacy code base (implemented in Erlang/OTP) into the 
+new architecture (Component Based Architecture deployed on top of Ericsson's cloud infrastructure). 
+Our development strategy is based on TDD and XP. We also develop and extend unit tests using Eunit framework, 
+function tests to examine the different functionality of the SGC (Session Gateway Controller) application 
+based on Erlang common test framework and we also have system tests to test the overall system in a real 
+world environment (heavy load, live traffic etc.). 
+We use Jenkins as our CI (Continuous Integration) tool in order to improve our software 
+quality and reduce release and delivery time. I am member of an Agile team and our team-work is 
+organized based on Scrum-ban method.
+
+\citem{Research Assistant}, Mobility Research Group, Department of Information Technology, Uppsala University, Uppsala, Sweden (July 2012 - September 2012)\\ 
+\begin{itemize}
+ \item Studying the theory of type systems and mobile processes with a focus on the typed Psi-calculi theory
+  and its implementation issues.
+ \item Implementing the type system for different instances of Psi-calculi using the Standard ML programming language.
+\end{itemize}
+
+\citem{Software Developer}, Tehran Water Company, Tehran, Iran (May 2005 - August 2009)\\ 
+\begin{itemize}
+ \item Developing and maintaining the tele-control system software (on the control center site based on \texttt{C++} as well as remote stations written in \texttt{C\#}).
+ \item Maintenance of RTU (remote transmission unit) devices and measurement instruments software.
+ \item Converting the old documentation system of the company into a upscale database management system (Oracle MySQL).
+\end{itemize}
+
+\citem{Front-end and Back-end Developer (part-time)}, SCWMRI Research Institute, 
+Tehran, Iran (April 2007 - September 2008)
+\begin{itemize} 
+\item Design and implementation of a CMS (content management system) as a digital portal for institute.
+\item Designing of a database system for data manipulation of the CMS using MS-Sql.
+\end{itemize}
+
+\end{category}
+
+\begin{center}
+\line(1,0){400}
+\end{center}
+% ------- Skills ------------------------------------------------------
+\begin{category}{Skills}
+\citem {Programming languages and skills:}\hspace{1 mm}OOP (Java, \texttt{C++}), FP (Erlang, StandardML), 
+shell scripting (bash and tcsh), C and Groovy.
+
+\citem {Languages:}\hspace{1 mm}Persian as mother tongue, fluent spoken/written English,
+Sfi level D Swedish.
+
+\citem {Agile:}\hspace{1 mm}practice Scrum methodology in a XFT during the ``large scale programming'' course.
+Used Kanban during my master thesis project. Have Worked in Scrum-ban teams at the company of Ericsson.
+
+\citem{Version control systems:}\hspace{1 mm}Subversion, Git, Clearcase. 
+
+\citem{Automated testing and verification:}\hspace{1 mm}in-depth knowledge of unit testing with JUnit/EUnit 
+, function testing (Erlang common-test framework) and integration and system testing.
+
+\citem {Others:}\hspace{1 mm}extensive understanding of large scale Software engineering in all its aspects from
+requirements gathering to the design and development; testing and delivery to the customer site. 
+Good knowledge of Cloud and Virtualization technologies, Continues Integration and delivery, 
+Linux (workstation/cluster), Object Oriented design and functional programming.
+Good in troubleshooting and solving problems.
+
+\end{category}
+
+\begin{center}
+\line(1,0){400}
+\end{center}
+
+% -------- Reference --------------------------------------------
+
+\begin{category}{Reference} 
+\citemnobullet Available on request.
+\end{category}
+
+\end{document}
