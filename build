@@ -1,2 +1,3 @@
-latex resume.pdf
+git clean -df
+latex resume.tex
 dvipdfm resume.dvi
