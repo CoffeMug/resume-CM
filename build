@@ -1,3 +1,10 @@
+#!/bin/sh
+
 git clean -df
-latex resume.tex
-dvipdfm resume.dvi
+
+[ -x "$(command -v latex)" ] && [ -x "$(command -v dvipdfm)" ] \
+|| { echo "latex and/or dvipdfm is not installed. Please install them first!"; exit 1; } 
+
+latex resume.tex 
+dvipdfm resume.dvi 
+exit 0
